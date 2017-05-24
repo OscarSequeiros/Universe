@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Universe</string>
+
+    <!-- Texto para Splash -->
+    <string name = "splash_char_u">U</string>
+    <string name = "splash_char_n">N</string>
+    <string name = "splash_char_i">I</string>
+    <string name = "splash_char_v">V</string>
+    <string name = "splash_char_e">E</string>
+    <string name = "splash_char_r">R</string>
+    <string name = "splash_char_s">S</string>
+
+    <!-- Texto para login -->
+    <string name = "login_title">U&#160;N&#160;I&#160;V&#160;E&#160;R&#160;S&#160;E</string>
+    <string name = "login_subtitle">Acceder con redes sociales</string>
+    <string name = "login_sign_in_facebook">Sign in with Facebook</string>
+    <string name = "login_sign_in_twitter">Sign in with Twitter</string>
+    <string name = "login_sign_in_google">Sign in with Google</string>
+    <string name = "login_or">OR</string>
+    <string name = "login_hint_user">User</string>
+    <string name = "login_hint_passw">Password</string>
+    <string name = "login_btn_sign_in">Sign In</string>
+
+</resources>
