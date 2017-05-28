@@ -5,7 +5,7 @@
     android:id="@+id/framelayout_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.osequeiros.universe.SplashActivity">
+    tools:context="com.example.osequeiros.universe.features.splash.SplashActivity">
 
     <ImageView
         android:contentDescription="@string/app_name"

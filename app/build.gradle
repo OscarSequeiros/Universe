@@ -38,9 +38,6 @@ dependencies {
 
     // Dependencia Kotlin
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-
-    // Dependencia animación Splash
-    compile 'yasic.library.ParticleTextView:particletextview:0.0.5'
 }
 repositories {
     mavenCentral()
