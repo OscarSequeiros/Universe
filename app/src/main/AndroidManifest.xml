@@ -23,7 +23,17 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".features.auth.signin.SignInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Login"/>
+
+        <activity
+            android:name=".features.auth.signup.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Login"/>
+
+        <activity
+            android:name=".features.auth.signin.SIgnActivityJava"
             android:screenOrientation="portrait"
             android:theme="@style/Login"/>
 

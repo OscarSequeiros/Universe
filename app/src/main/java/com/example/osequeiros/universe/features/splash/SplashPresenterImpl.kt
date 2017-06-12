@@ -1,10 +1,8 @@
 package com.example.osequeiros.universe.features.splash
 
-import android.graphics.Typeface
 import android.util.DisplayMetrics
 import android.view.animation.*
 import android.widget.TextView
-import com.example.osequeiros.universe.LoginActivity
 import java.util.*
 
 /**
@@ -22,18 +20,14 @@ class SplashPresenterImpl (private var splashView: SplashView) : SplashPresenter
     /** Método para comenzar con delay la animación */
     override fun startAnimation() {
         val animateTask = object : TimerTask() {
-            override fun run() {
-                splashView.runOnMainThread()
-            }
+            override fun run() = splashView.runOnMainThread()
         }
-
         timer = Timer()
         timer.schedule(animateTask, TIME_DELAY_START_ANIMATION.toLong())
     }
 
-
     /** Método para animar cada letra  */
-    override fun animatedChars(chars: List<TextView>, dm: DisplayMetrics, type: Typeface) {
+    override fun animatedChars(chars: List<TextView>, dm: DisplayMetrics) {
         // Barra de estado :
         //int statusBar = dm.heightPixels - mFrameLayout.getMeasuredHeight();
 
@@ -89,15 +83,11 @@ class SplashPresenterImpl (private var splashView: SplashView) : SplashPresenter
         }
     }
 
-    /** Método para lanzar la siguiente activida */
+    /** Método para lanzar la siguiente actividad */
     override fun launchNextView() {
         val task = object : TimerTask() {
-            override fun run() {
-                splashView.launchNextView(LoginActivity::class.java)
-            }
+            override fun run() = splashView.launchNextView("SignInActivity")
         }
-
-        timer = Timer()
         timer.schedule(task, TIME_SPLASH.toLong())
     }
 

@@ -12,7 +12,7 @@
 
     <!-- Texto para login -->
     <string name = "login_title">U&#160;N&#160;I&#160;V&#160;E&#160;R&#160;S&#160;E</string>
-    <string name = "login_subtitle">Acceder con redes sociales</string>
+    <string name = "login_subtitle">Sign in with social media</string>
     <string name = "login_sign_in_facebook">Sign in with Facebook</string>
     <string name = "login_sign_in_twitter">Sign in with Twitter</string>
     <string name = "login_sign_in_google">Sign in with Google</string>
@@ -20,5 +20,13 @@
     <string name = "login_hint_user">User</string>
     <string name = "login_hint_passw">Password</string>
     <string name = "login_btn_sign_in">Sign In</string>
+    <string name = "login_btn_go_sign_up"> Create account >></string>
+
+    <!-- Texto para sign up -->
+    <string name = "login_btn_sign_up"> Sign Up</string>
+    <string name = "login_btn_go_sign_in">&lt;&lt; Sign In</string>
+    <string name = "login_hint_name">My name is &#8230;</string>
+    <string name = "login_hint_mail">My email is &#8230;</string>
+    <string name = "login_hint_password">My password will be &#8230;</string>
 
 </resources>

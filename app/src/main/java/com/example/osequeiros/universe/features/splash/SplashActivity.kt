@@ -8,14 +8,17 @@ import android.util.DisplayMetrics
 import android.view.View
 import android.view.animation.AnimationSet
 import android.widget.TextView
-import com.example.osequeiros.universe.LoginActivity
 import com.example.osequeiros.universe.R
+import com.example.osequeiros.universe.features.auth.signin.SIgnActivityJava
+import com.example.osequeiros.universe.features.auth.signin.SignInActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 import java.util.*
 
 class SplashActivity : AppCompatActivity(), SplashView {
 
-    var presenter : SplashPresenterImpl? = null
+    companion object {
+        lateinit var presenter : SplashPresenterImpl
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,13 +29,13 @@ class SplashActivity : AppCompatActivity(), SplashView {
 
     public override fun onPause() {
         super.onPause()
-        presenter!!.pauseAnimation()
+        presenter.pauseAnimation()
     }
 
     public override fun onResume() {
         super.onResume()
-        presenter!!.startAnimation()
-        presenter!!.launchNextView()
+        presenter.startAnimation()
+        presenter.launchNextView()
     }
 
     /** Sobrescribimos el método para evitar la interrupción  */
@@ -45,7 +48,7 @@ class SplashActivity : AppCompatActivity(), SplashView {
         runOnUiThread { animated() }
     }
 
-    /** Método para animar las letras  */
+    /** Método para animar las letras y cambiar fuente */
     private fun animated() {
         // Recuperamos el tipo de fuente :
         val type = Typeface.createFromAsset(assets, "fonts/Merriweather-Regular.ttf")
@@ -59,7 +62,7 @@ class SplashActivity : AppCompatActivity(), SplashView {
         val dm = DisplayMetrics()
         this.windowManager.defaultDisplay.getMetrics(dm)
 
-        presenter!!.animatedChars(chars, dm, type)
+        presenter.animatedChars(chars, dm)
     }
 
     /** Método para mostrar la animación de letras */
@@ -68,8 +71,12 @@ class SplashActivity : AppCompatActivity(), SplashView {
     }
 
     /** Método para lanzar la siguiente actividad */
-    override fun launchNextView(c: Class<LoginActivity>) {
-        val intent = Intent().setClass(this@SplashActivity, c)
+    override fun launchNextView(tag: String) {
+        var intent: Intent? = null
+        if (tag == "SignInActivity") {
+            intent = Intent().setClass(this@SplashActivity, SignInActivity::class.java)
+            //intent = Intent().setClass(this@SplashActivity, SIgnActivityJava::class.java)
+        }
         startActivity(intent)
         finish()
     }

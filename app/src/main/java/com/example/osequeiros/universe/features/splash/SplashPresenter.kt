@@ -1,6 +1,5 @@
 package com.example.osequeiros.universe.features.splash
 
-import android.graphics.Typeface
 import android.util.DisplayMetrics
 import android.widget.TextView
 
@@ -10,7 +9,7 @@ import android.widget.TextView
  */
 interface SplashPresenter {
 
-    fun animatedChars(chars: List<TextView>, dm: DisplayMetrics, type: Typeface)
+    fun animatedChars(chars: List<TextView>, dm: DisplayMetrics)
 
     fun launchNextView()
 

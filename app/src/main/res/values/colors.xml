@@ -4,14 +4,19 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="colorFacebook">#3b5998</color>
-    <color name="colorGoogle">#d34836</color>
-    <color name="colorTwitter">#1dcaff</color>
+    <color name = "colorFacebook">#3b5998</color>
+    <color name = "colorGoogle">#d34836</color>
+    <color name = "colorTwitter">#1dcaff</color>
 
     <color name = "transparent">#99888888</color>
-    <color name = "colorBorderLogin">#CDCDCD</color>
-    <color name = "colorHintDark">#CDCDCD</color>
+    <color name = "transparentWhite">#00000000</color>
+    <color name = "colorBorderLogin">#BBBBBB</color>
+    <color name = "colorHintDark">#BBBBBB</color>
 
-    <color name = "colorIcon">#FF3F48</color>
+    <color name = "colorMail">#FF3F48</color>
+
+    <color name = "colorTextPrimaryDark">#FEFEFE</color>
+
+    <color name = "colorDisabled">#777</color>
 
 </resources>
